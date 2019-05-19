@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import PokeList from './Components/PokeList';
 
 const pokemon = [
@@ -95,11 +95,7 @@ class App extends React.Component {
             id={item.id}
             url={item.url}
             name={item.name}
-            types={item.types.map((types, typesIndex) => (
-              <li className="type__item" key={typesIndex}>
-                {types}
-              </li>
-            ))}
+            types={item.types}
           />
         ))}
       </div>
