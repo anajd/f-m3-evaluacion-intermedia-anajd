@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 class Pokemon extends React.Component {
   render() {
-    const { id, url, name, types } = this.props;
+    const { url, name, types } = this.props;
     return (
-      <li className="pokelist__item" key={id}>
+      <li className="pokelist__item">
         <div className="pokelist__li">
           <img className="pokelist__img" src={url} alt={name} />
           <h2 className="pokelist__name">{name}</h2>
           <ul className="pokeList__types">
             {types.map((types, typesIndex) => (
-              <li className="type__item" key={typesIndex - 1}>
+              <li className="type__item" key={typesIndex}>
                 {types}
               </li>
             ))}

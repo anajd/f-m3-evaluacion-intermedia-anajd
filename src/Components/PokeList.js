@@ -4,10 +4,10 @@ import Pokemon from './Pokemon';
 
 class PokeList extends React.Component {
   render() {
-    const { id, url, name, types } = this.props;
+    const { url, name, types } = this.props;
     return (
       <ul className="pokelist">
-        <Pokemon id={id} url={url} name={name} types={types} />
+        <Pokemon url={url} name={name} types={types} />
       </ul>
     );
   }
