@@ -5,19 +5,19 @@ class Pokemon extends React.Component {
   render() {
     const { url, name, types } = this.props;
     return (
-      <li className="pokelist__item">
-        <div className="pokelist__li">
-          <img className="pokelist__img" src={url} alt={name} />
-          <h2 className="pokelist__name">{name}</h2>
-          <ul className="pokeList__types">
-            {types.map((types, typesIndex) => (
-              <li className="type__item" key={typesIndex}>
-                {types}
-              </li>
-            ))}
-          </ul>
+      <div className="card">
+        <div className="card__img--container">
+          <img className="card__img" src={url} alt={name} />
         </div>
-      </li>
+        <h2 className="card__name">{name}</h2>
+        <ul className="card__types">
+          {types.map((types, typesIndex) => (
+            <li className="type__item" key={typesIndex}>
+              {types}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }

@@ -1,33 +1,104 @@
-.App {
+body {
+  margin: 0;
+  background-image: url("Images/fondo.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.App__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.App__title {
   text-align: center;
+  color: #ffca03;
+  text-shadow: 2px 2px 0 #316ab3, 2px 2px 0 #316ab3, 2px 2px 0 #316ab3, 2px 2px 0 #316ab3;
+  font-family: "Baloo Bhai", cursive;
+  font-size: 50px;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokelist {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px 150px;
+  grid-gap: 20px;
+}
+
+.pokelist__item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 5px;
+  background: #fff;
+  width: 150px;
+  height: 220px;
+  margin: 0 5px 5px 0;
+  float: left;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 2s, transform 500ms, filter 500ms ease-in-out;
+}
+
+.pokelist__item:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  width: 100%;
+}
+
+.card__img--container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: solid 1px black;
+}
+
+.card__img {
+  width: 80%;
+}
+
+.card__name {
+  text-transform: capitalize;
+  text-align: center;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.card__types {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: solid 1px black;
+  padding: 10px 10px;
+}
+
+.type__item {
+  background-color: grey;
+  border-radius: 30px;
+  padding: 5px;
+  margin-right: 5px;
+  text-transform: uppercase;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 10px;
+  font-family: "Roboto Mono", monospace;
 }

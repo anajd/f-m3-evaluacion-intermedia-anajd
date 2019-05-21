@@ -1,4 +1,4 @@
-const pokemon = [
+const pokemonArray = [
   {
     id: 1,
     name: 'bulbasaur',
@@ -81,4 +81,4 @@ const pokemon = [
   }
 ];
 
-export { pokemon };
+export { pokemonArray };
