@@ -8,7 +8,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       pokemon: []
-      //favorite: []
     };
   }
 
@@ -21,12 +20,6 @@ class App extends React.Component {
       pokemon: pokemonArray
     });
   }
-
-  // favPokemon(event) {
-  //   const selectPokemon = parseInt(event.currentTarget.id);
-  //   this.setState(prevState => {
-  //   })
-  // }
 
   render() {
     const { pokemon } = this.state;
