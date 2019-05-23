@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+//import PokeballFav from '../Images/pokeballFav.png';
 
 class Pokemon extends React.Component {
   render() {
-    const { url, name, types } = this.props;
+    const { id, url, name, types, favPokemon, handleFav } = this.props;
     return (
-      <div className="card">
+      <div
+        className={`card ${favPokemon.includes(id) ? 'fav' : ''}`}
+        id={id}
+        onClick={handleFav}
+      >
         <div className="card__img--container">
           <img className="card__img" src={url} alt={name} />
         </div>
@@ -23,10 +28,11 @@ class Pokemon extends React.Component {
 }
 
 Pokemon.propTypes = {
-  id: PropTypes.number,
   url: PropTypes.string,
   name: PropTypes.string,
-  types: PropTypes.arrayOf(PropTypes.string)
+  types: PropTypes.arrayOf(PropTypes.string),
+  favPokemon: PropTypes.array,
+  handleFav: PropTypes.func
 };
 
 export default Pokemon;
